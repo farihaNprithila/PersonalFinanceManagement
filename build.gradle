@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+    id 'war'
+    id 'application'
+    id 'org.springframework.boot' version '2.4.4'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+}
+
+group 'com.prithila'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.3.10.RELEASE'
+
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '2.4.4'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.3.10.RELEASE'
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.25'
+
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.5.4'
+    implementation group: 'org.springframework.security', name: 'spring-security-taglibs', version: '5.5.2'
+
+    implementation group: 'org.hibernate.validator', name: 'hibernate-validator', version: '7.0.1.Final'
+
+    compileOnly group: 'javax.servlet.jsp', name: 'jsp-api', version: '2.2'
+    implementation group: 'javax.servlet', name: 'jstl', version: '1.2'
+
+    implementation group: 'org.apache.tomcat', name: 'tomcat-jasper', version: '9.0.46'
+
+
+}
+
+mainClassName = "com.prithila.personalfinancemanagement.FinanceManagementApp"
